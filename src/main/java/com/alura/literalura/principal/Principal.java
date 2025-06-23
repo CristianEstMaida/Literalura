@@ -28,6 +28,7 @@ public class Principal {
     private String json;
     private List<Autor> autores;
     private List<Libro> libros;
+    Optional<Autor> autorBuscado;
 
     private String menu = """
             ------------
@@ -37,6 +38,9 @@ public class Principal {
             3 - listar autores registrados
             4 - listar autores vivos en determinado año
             5 - listar libros por idioma
+            6 - mostrar estadísticas
+            7 - top 10 libros más descargados
+            8 - buscar autor por nombre
             0 - salir
             """;
 
@@ -53,6 +57,9 @@ public class Principal {
             opcionElegida = teclado.nextInt();
             teclado.nextLine();
             switch (opcionElegida) {
+                case 8 -> buscarAutorPorNombre();
+                case 7 -> buscarTop10Libros();
+                case 6 -> analizarDescargasDeLibros();
                 case 5 -> buscarLibrosPorIdioma();
                 case 4 -> buscarAutoresVivos();
                 case 3 -> mostrarAutoresBuscados();
@@ -135,6 +142,40 @@ public class Principal {
                 .findByFechaDeNacimientoLessThanEqualAndFechaDeFallecimientoGreaterThanEqual(anio, anio);
 
         autoresVivos.forEach(System.out::println);
+    }
+    
+    private void buscarTop10Libros() {
+        List<Libro> topLibros = libroRepository.findTop10ByOrderByNumeroDeDescargasDesc();
+        
+        System.out.println("📚 Top 10 libros más descargados:");
+        topLibros.forEach(l ->
+                          System.out.printf("Libro: %s Descargas %s\n",
+                                                   l.getTitulo(), l.getNumeroDeDescargas()));
+    }
+
+    private void analizarDescargasDeLibros(){
+        DoubleSummaryStatistics est = libroRepository.findAll().stream()
+                .filter(l -> l.getNumeroDeDescargas() > 0)
+                .collect(Collectors.summarizingDouble(Libro::getNumeroDeDescargas));
+
+        System.out.println("Descargas totales: " + est.getSum());
+        System.out.println("Promedio de descargas: " + est.getAverage());
+        System.out.println("Cantidad mínima de descargas: " + est.getMin());
+        System.out.println("Cantidad máxima de descargas: " + est.getMax());
+        System.out.println("Cantidad total de libros: " + est.getCount());
+    }
+
+    private void buscarAutorPorNombre() {
+        System.out.println("🔎 Escribe el nombre del autor que deseas buscar");
+        var nombreAutor = teclado.nextLine();
+
+        autorBuscado = autorRepository.findByNombreContainingIgnoreCase(nombreAutor);
+
+        if (autorBuscado.isPresent()) {
+            System.out.println("✅ El Autor buscado es:\n" + autorBuscado.get());
+        } else {
+            System.out.println("❌ Autor no encontrado.");
+        }
 
     }
 }
