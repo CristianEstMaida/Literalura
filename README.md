@@ -12,19 +12,19 @@ Este proyecto permite explorar libros y autores a través de una base de datos i
 
 ![Java](https://img.shields.io/badge/Java-21-blue)
 ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.0-brightgreen)
-![Estado](https://img.shields.io/badge/estado-en%20desarrollo-yellow)
+![Estado](https://img.shields.io/badge/estado-finalizado-brightgreen)
 
 ---
 
 ## 📑 Índice
 
-1. [Descripción del Proyecto](#descripción-del-proyecto)
-2. [Funcionalidades](#funcionalidades)
-3. [Cómo usarlo](#cómo-usarlo)
-4. [Ayuda y contacto](#ayuda-y-contacto)
-5. [Autores y colaboradores](#autores-y-colaboradores)
-6. [Tecnologías utilizadas](#tecnologías-utilizadas)
-7. [Licencia](#licencia)
+1. [Descripción del Proyecto](#-descripción-del-proyecto)
+2. [Funcionalidades](#-funcionalidades)
+3. [Cómo usarlo](#-cómo-usarlo)
+4. [Ayuda y contacto](#-ayuda-y-contacto)
+5. [Autores y colaboradores](#-autores-y-colaboradores)
+6. [Tecnologías utilizadas](#-tecnologías-utilizadas)
+7. [Licencia](#-licencia)
 
 ---
 
@@ -54,3 +54,36 @@ Usá **Java 21** y **Maven Wrapper** para compilar y correr la app fácilmente:
 ```bash
 ./mvnw clean install
 ./mvnw spring-boot:run
+```
+
+## 🆘 Ayuda y contacto
+Para dudas, sugerencias o reportes de errores, podés:
+
+- Crear un [issue en GitHub](https://github.com/tuusuario/literalura/issues)
+- Enviarme un mensaje si tenés acceso al proyecto en alguna plataforma educativa (como Alura)
+
+---
+
+## 👥 Autores y colaboradores
+
+- 👨‍💻 **Cristian (@CristianEstMaida)** – Desarrollo completo, lógica de negocio y estructura del proyecto
+- 🙌 Agradecimientos a [Alura LATAM](https://www.aluracursos.com/) por el material y los desafíos educativos
+
+---
+
+## 🔧 Tecnologías utilizadas
+
+- Java 21
+- Spring Boot 3
+- Spring Data JPA
+- H2 / PostgreSQL
+- Maven Wrapper
+- Gson (para parseo JSON)
+- API Gutendex (fuente de libros y autores)
+
+---
+
+## 🔓 Licencia
+
+Este proyecto está licenciado bajo los términos de la licencia MIT.  
+Podés consultar el archivo [`LICENSE`](LICENSE) para más detalles.
