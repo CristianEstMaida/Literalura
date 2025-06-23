@@ -1,7 +1,6 @@
 # 📚 Literalura - Explorador de Libros
-## 🧑‍💻 Cómo usarlo
 
-Este proyecto permite explorar libros y autores a través de una base de datos interactiva conectada con una API externa. Podés consultar títulos por idioma, autores vivos en determinada época y estadísticas generales.
+> Este proyecto permite explorar libros y autores a través de una base de datos interactiva conectada con una API externa. Podés consultar títulos por idioma, autores vivos en determinada época y estadísticas generales.
 
   
 <sub>*Imagen representativa, dominio público*</sub>
@@ -47,7 +46,7 @@ Literalura conecta con una API externa para descargar libros y autores. Luego, g
 
 ---
 
-## 🚀 Cómo ejecutar
+## 🧑‍💻 Cómo usarlo
 
 Usá **Java 21** y **Maven Wrapper** para compilar y correr la app fácilmente:
 
