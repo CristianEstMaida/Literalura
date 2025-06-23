@@ -59,7 +59,7 @@ Usá **Java 21** y **Maven Wrapper** para compilar y correr la app fácilmente:
 ## 🆘 Ayuda y contacto
 Para dudas, sugerencias o reportes de errores, podés:
 
-- Crear un [issue en GitHub](https://github.com/tuusuario/literalura/issues)
+- Crear un [issue en GitHub](https://github.com/CristianEstMaida/Literalura/issues)
 - Enviarme un mensaje si tenés acceso al proyecto en alguna plataforma educativa (como Alura)
 
 ---
