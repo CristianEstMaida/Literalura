@@ -2,8 +2,7 @@
 
 > Este proyecto permite explorar libros y autores a través de una base de datos interactiva conectada con una API externa. Podés consultar títulos por idioma, autores vivos en determinada época y estadísticas generales.
 
-  
-<sub>*Imagen representativa, dominio público*</sub>
+![Portada del Proyecto](https://github.com/CristianEstMaida/Literalura/blob/main/literalura.png)
 
 ---
 
