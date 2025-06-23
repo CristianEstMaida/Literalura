@@ -10,4 +10,6 @@ public interface AutorRepository extends JpaRepository<Autor, Long> {
     Autor findByNombre(String nombreAutor);
 
     List<Autor> findByFechaDeNacimientoLessThanEqualAndFechaDeFallecimientoGreaterThanEqual(int anio, int anio1);
+
+    Optional<Autor> findByNombreContainingIgnoreCase(String nombreAutor);
 }
